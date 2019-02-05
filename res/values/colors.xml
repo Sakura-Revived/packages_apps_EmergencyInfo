@@ -24,7 +24,7 @@
     <color name="white_with_alpha">#B2FFFFFF</color>
     <color name="hint_text_color">#36000000</color>
 
-    <color name="primary_dark_color">@color/material_grey_300</color>
-    <color name="accent_color_light">@color/accent_material_light</color>
-    <color name="accent_color_dark">@color/accent_material_dark</color>
+    <color name="primary_dark_color">@*android:color/primary_device_default_dark</color>
+    <color name="accent_color_light">@*android:color/accent_device_default_light</color>
+    <color name="accent_color_dark">@*android:color/accent_device_default_dark</color>
 </resources>
