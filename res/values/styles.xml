@@ -15,6 +15,7 @@
 -->
 <resources>
     <style name="AppTheme" parent="@android:style/Theme.DeviceDefault.Settings">
+        <item name="android:itemBackground">@drawable/item_background</item>
         <item name="colorPrimaryDark">@color/primary_dark_color</item>
         <item name="tabIndicatorColor">@color/accent_color_dark</item>
         <item name="textColorActionBar">?android:attr/textColorPrimary</item>
@@ -24,6 +25,7 @@
     <!-- Base emergency theme. -->
     <style name="AppThemeEmergency" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:preferenceCategoryStyle">@style/AppTheme.PreferenceCategoryStyle</item>
+        <item name="android:itemBackground">@drawable/item_background</item>
         <item name="colorPrimaryDark">@color/emergency_primary_dark</item>
         <item name="colorPrimary">@color/emergency_primary</item>
         <item name="textColorActionBar">@color/tab_text_color</item>
