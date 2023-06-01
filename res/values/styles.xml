@@ -37,6 +37,13 @@
         <item name="colorControlNormal">?attr/textColorActionBar</item>
     </style>
 
+    <style name="Widget.ActionBar.Base"
+           parent="@android:style/Widget.DeviceDefault.Light.ActionBar.Solid"/>
+
+    <style name="Widget.ActionBar" parent="Widget.ActionBar.Base">
+        <item name="android:contentInsetStart">@dimen/actionbar_contentInsetStart</item>
+    </style>
+
     <!-- Tabs -->
     <style name="AppTheme.TabLayout" parent="Widget.Design.TabLayout">
         <item name="tabTextAppearance">@style/AppTheme.TabText</item>
@@ -76,12 +83,26 @@
     <style name="PreferenceCategory" parent="@style/Preference.Category.Material">
         <item name="android:layout">@layout/preference_category_material_settings</item>
     </style>
-    <style name="ClearAllDialogTheme" parent="@*android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar.MinWidth">
-        <item name="android:colorBackgroundFloating">@*android:color/notification_material_background_color</item>
-        <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
-        <item name="android:bottomRightRadius">@*android:dimen/config_dialogCornerRadius</item>
-        <item name="android:bottomLeftRadius">@*android:dimen/config_dialogCornerRadius</item>
-        <item name="android:topRightRadius">@*android:dimen/config_dialogCornerRadius</item>
-        <item name="android:topLeftRadius">@*android:dimen/config_dialogCornerRadius</item>
+
+    <style name="ClearAllDialogTheme" parent="@style/Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="colorAccent">@*android:color/accent_device_default_light</item>
+        <item name="android:colorBackground">@color/dialog_background</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:clipToPadding">true</item>
+        <item name="android:clipChildren">true</item>
+
+        <!-- Redefine the ActionBar style for contentInsetStart -->
+        <item name="android:actionBarStyle">@style/Widget.ActionBar</item>
+
+        <!-- copied from Theme.DeviceDefault.Dialog.Alert -->
+        <item name="dialogCornerRadius">@*android:dimen/config_dialogCornerRadius</item>
+        <item name="android:windowTitleStyle">@*android:style/DialogWindowTitle.DeviceDefault</item>
+        <item name="android:textAppearanceMedium">@style/TextAppearance.DialogMessage</item>
+        <item name="buttonBarButtonStyle">@*android:style/Widget.DeviceDefault.Button.ButtonBar.AlertDialog</item>
+    </style>
+
+    <style name="TextAppearance.DialogMessage"
+           parent="@*android:style/TextAppearance.DeviceDefault.Body1">
+        <item name="android:textSize">16sp</item>
     </style>
 </resources>
