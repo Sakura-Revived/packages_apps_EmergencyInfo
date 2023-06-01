@@ -14,7 +14,7 @@
      limitations under the License.
 -->
 <resources>
-    <color name="emergency_primary_dark">#C62828</color>
+    <color name="emergency_primary_dark">#D93025</color>
     <color name="emergency_primary">#D93025</color>
     <color name="emergency_contacts_text_color">#E53935</color>
     <color name="emergency_accent">#FFFF00</color>
